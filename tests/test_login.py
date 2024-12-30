@@ -1,8 +1,8 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from driver import driver
-from credentials import *
+from utils.driver_setup import driver
+from utils.credentials import *
 
 driver = driver()
 
