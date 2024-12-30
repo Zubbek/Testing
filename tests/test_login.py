@@ -1,12 +1,12 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from utils.driver_setup import driver
-from utils.credentials import *
+from utilities.driver_setup import chrome_driver
+from utilities.credentials import *
 
-driver = driver()
 
 def test_valid_login():
+    driver = chrome_driver()
     try:
         driver.get("https://www.saucedemo.com/")
         username = driver.find_element(By.ID, "user-name")
@@ -33,6 +33,7 @@ def test_valid_login():
 
 
 def test_invalid_username_login():
+    driver = chrome_driver()
     try:
         driver.get("https://www.saucedemo.com/")
         username = driver.find_element(By.ID, "user-name")
@@ -56,6 +57,7 @@ def test_invalid_username_login():
 
 
 def test_invalid_password_login():
+    driver = chrome_driver()
     try:
         driver.get("https://www.saucedemo.com/")
         username = driver.find_element(By.ID, "user-name")

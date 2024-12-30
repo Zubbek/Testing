@@ -2,12 +2,12 @@ from selenium.common import TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from utils.driver_setup import driver
-from utils.credentials import USERNAME, PASSWORD
+from utilities.driver_setup import chrome_driver
+from utilities.credentials import USERNAME, PASSWORD
 
-driver = driver()
 
 def test_add_to_cart_from_main_page():
+    driver = chrome_driver()
     try:
         driver.get("https://www.saucedemo.com/")
 
@@ -37,6 +37,7 @@ def test_add_to_cart_from_main_page():
 
 
 def test_add_to_cart_from_product_page():
+    driver = chrome_driver()
     try:
         driver.get("https://www.saucedemo.com/")
 
@@ -70,6 +71,7 @@ def test_add_to_cart_from_product_page():
         driver.quit()
 
 def test_remove_from_cart_on_main_page():
+    driver = chrome_driver()
     try:
         driver.get("https://www.saucedemo.com/")
 
@@ -112,6 +114,7 @@ def test_remove_from_cart_on_main_page():
 
 
 def test_remove_from_cart_on_product_page():
+    driver = chrome_driver()
     try:
         driver.get("https://www.saucedemo.com/")
 
