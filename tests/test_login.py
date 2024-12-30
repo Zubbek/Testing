@@ -6,7 +6,6 @@ from utils.credentials import *
 
 driver = driver()
 
-
 def test_valid_login():
     try:
         driver.get("https://www.saucedemo.com/")
@@ -18,7 +17,7 @@ def test_valid_login():
         password.send_keys(PASSWORD)
         login_button.click()
 
-        title = WebDriverWait(driver, 10).until(
+        title = WebDriverWait(driver, 5).until(
             EC.presence_of_element_located((By.CLASS_NAME, "title"))
         )
 
@@ -26,7 +25,8 @@ def test_valid_login():
         print("Login successfully ended!")
 
     except Exception as error:
-        print(error)
+        print("error occurred: ", error)
+        raise
 
     finally:
         driver.quit()
@@ -48,7 +48,8 @@ def test_invalid_username_login():
             print("Successfully displayed error message!")
 
     except Exception as error:
-        print(error)
+        print("error occurred: ", error)
+        raise
 
     finally:
         driver.quit()
@@ -71,6 +72,7 @@ def test_invalid_password_login():
 
     except Exception as error:
         print(error)
+        raise
 
     finally:
         driver.quit()
