@@ -6,6 +6,7 @@ This project is an ongoing learning experience where I am practicing automated t
 Currently, I am  working on improving my automation skills by writing test cases for:
 - Login functionality.
 - Adding and removing items from the shopping cart.
+- Sorting products functionality.
 - Generating HTML reports to document the test results.
 
 ## **Features**
@@ -21,8 +22,14 @@ Currently, I am  working on improving my automation skills by writing test cases
    - Test removing a product from the cart:
      - From the **homepage**.
      - From the **product details page**.
+       
+3. **Sorting Tests**:
+   - Test sorting products alphabetically from A-Z
+   - Test sorting products alphabetically reverse from Z-A
+   - Test sorting products from lowest price
+   - Test sorting products from highest price
 
-3. **HTML Reports**:
+5. **HTML Reports**:
    - Generate detailed HTML reports after each test run to document results.
 
 ---
